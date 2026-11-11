@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYRA — Your Personal AI Assistant</title>
+<meta name="description" content="AYRA is a free, voice-first personal AI assistant for Android and Windows. Talk naturally, open apps, control settings, and keep AYRA running in the background with 'Hey AYRA'.">
+<meta name="theme-color" content="#0a0e27">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Ctext x='32' y='44' font-size='34' font-family='Arial' font-weight='900' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top" aria-label="AYRA home"><span class="logo-mark">A</span> AYRA</a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#top">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it Works</a>
+      <a href="#install">Install</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="icon-btn theme" id="themeToggle" aria-label="Switch light / dark theme" title="Switch theme">&#9790;</button>
+    <a class="btn btn-primary btn-sm nav-cta" href="#install">Get AYRA Free</a>
+    <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">&#10022; Your Personal AI Assistant</span>
+        <h1>Meet <span class="grad-text">AYRA</span> &#10022;</h1>
+        <p class="hero-sub">An intelligent, voice-first AI assistant that works with you &mdash; on web, mobile, and in the background.</p>
+        <div class="pills">
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg> Voice Control</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linejoin="round"><path d="M12 2 2 8l10 6 10-6-10-6zM2 14l10 6 10-6"/></svg> Background Assistant</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg> System Actions</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#how" data-web-btn>Use AYRA on Web &#10140;</a>
+          <a class="btn btn-outline" href="downloads/ayra-release.apk" download>Install App (APK) &#8681;</a>
+        </div>
+        <div class="platforms">
+          <span><svg viewBox="0 0 24 24"><path d="M7.2 9.5 6 6.9c-.3-.7.5-1.4 1.2-1L8.6 8 7.2 9.5zm9.6 0L15.4 8l1.4-2.1c.7-.4 1.5.3 1.2 1l-1.2 2.6zM17.9 10.6c.8 0 1.4.6 1.4 1.4v1.6c0 2.9-2.2 5.4-5.1 5.8l-.9 1.9c-.2.4-.8.4-1 0l-.3-.7h-1l-.3.7c-.2.4-.8.4-1 0l-.9-1.9C6 18.9 3.8 16.4 3.8 13.6V12c0-.8.6-1.4 1.4-1.4h12.7zM8.5 14.5h1.7v1.7H8.5v-1.7zm5.3 0h1.7v1.7h-1.7v-1.7z"/></svg> Android</span>
+          <span class="sep">|</span>
+          <span><svg viewBox="0 0 24 24"><path d="M3 5.5 10.5 4.4v7.1H3V5.5zm0 13 7.5 1.1v-7.1H3v6zm8.7 1.3L21 21V12.5h-9.3v7.3zM11.7 4.2 21 3v8.5h-9.3V4.2z"/></svg> Windows</span>
+          <span class="sep">|</span>
+          <span>&#8681; Web (PWA)</span>
+        </div>
+        <div class="web-note" id="webNote">The web version of AYRA is coming soon. For the full experience &mdash; including the background assistant &mdash; install the Android app below.</div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img src="assets/ayra-hero.webp" alt="AYRA — a young woman wearing headphones with a glowing purple ring" width="1120" height="2240" fetchpriority="high">
+          <div class="waveform" aria-hidden="true">
+            <i style="height:40%;animation-delay:0s"></i><i style="height:75%;animation-delay:.1s"></i><i style="height:55%;animation-delay:.2s"></i><i style="height:95%;animation-delay:.3s"></i><i style="height:60%;animation-delay:.4s"></i><i style="height:85%;animation-delay:.15s"></i><i style="height:45%;animation-delay:.25s"></i><i style="height:70%;animation-delay:.35s"></i><i style="height:100%;animation-delay:.05s"></i><i style="height:50%;animation-delay:.45s"></i><i style="height:80%;animation-delay:.2s"></i><i style="height:35%;animation-delay:.3s"></i>
+          </div>
+        </div>
+        <div class="chip chip-listening">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 10v4"/></svg>
+          I&rsquo;m listening&hellip;
+        </div>
+        <div class="chip chip-hey">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg>
+          <span>Hey AYRA&hellip;<small>Open Notes</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 FEATURE CARDS -->
+  <section class="section" id="features" style="padding-top:40px">
+    <div class="container cards-4">
+      <article class="glass-card featured">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg></div>
+        <h3>Talk to AYRA</h3>
+        <p>Give voice or text commands naturally.</p>
+      </article>
+      <article class="glass-card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linejoin="round"><path d="M12 2 2 8l10 6 10-6-10-6zM2 14l10 6 10-6"/></svg></div>
+        <h3>Background Mode</h3>
+        <p>Keep AYRA active while you use other apps.</p>
+      </article>
+      <article class="glass-card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+        <h3>Do More</h3>
+        <p>Open apps, control settings, search, and more.</p>
+      </article>
+      <article class="glass-card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-4.5"/></svg></div>
+        <h3>Privacy First</h3>
+        <p>Your data stays on your device and in your control.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS / APP PREVIEW -->
+  <section class="section" id="how">
+    <div class="container how-grid">
+      <div class="app-mock" aria-label="AYRA app preview">
+        <aside class="app-side">
+          <span class="logo"><span class="logo-mark">A</span> AYRA</span>
+          <nav class="app-nav">
+            <a href="#how" class="active"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21h-6v-6h-6v6H3z"/></svg> Home</a>
+            <a href="#how"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg> Chat</a>
+            <a href="#how"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg> Voice</a>
+            <a href="#how"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4L14.5 12l-2.5-2.5 2.7-3.2z"/></svg> Tools</a>
+            <a href="#how"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9c.23.66.86 1.1 1.55 1H21a2 2 0 1 1 0 4h-.09c-.69 0-1.32.44-1.51 1z"/></svg> Settings</a>
+          </nav>
+        </aside>
+        <div class="app-main">
+          <div class="mini-wave" aria-hidden="true"><i style="height:50%;animation-delay:0s"></i><i style="height:90%;animation-delay:.15s"></i><i style="height:65%;animation-delay:.3s"></i><i style="height:100%;animation-delay:.1s"></i><i style="height:55%;animation-delay:.25s"></i><i style="height:80%;animation-delay:.05s"></i><i style="height:45%;animation-delay:.2s"></i></div>
+          <img class="app-avatar" src="assets/ayra-hero.webp" alt="AYRA avatar">
+          <h4>How can I help you today?</h4>
+          <div class="app-input">
+            <span>Type or speak to AYRA&hellip;</span>
+            <button class="mic-btn" type="button" aria-label="Speak to AYRA (demo)"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-copy">
+        <h2>Always With You &mdash;<br>Even in the <span class="grad-text">Background</span></h2>
+        <p>Keep AYRA running in the background so you can say &ldquo;Hey AYRA&rdquo; anytime &mdash; even while using other apps.</p>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#7c3aed"/><path d="m8 12.5 2.5 2.5L16 9.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Works in background (Foreground Service)</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#7c3aed"/><path d="m8 12.5 2.5 2.5L16 9.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Wake with &ldquo;Hey AYRA&rdquo;</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#7c3aed"/><path d="m8 12.5 2.5 2.5L16 9.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Responds with voice</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#7c3aed"/><path d="m8 12.5 2.5 2.5L16 9.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Lightweight &amp; battery-friendly</li>
+        </ul>
+        <div class="phone-mock" aria-label="Phone showing AYRA running notification">
+          <div class="phone-time">10:24</div>
+          <div class="phone-date">Tue, Nov 9</div>
+          <div class="phone-notif">
+            <span class="n-logo">A</span>
+            <div><b>AYRA is running</b><small>Tap to open &bull; Listening for &ldquo;Hey AYRA&rdquo;</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="section" id="features-list" style="padding-top:20px">
+    <div class="container">
+      <h2 class="section-title">Key <span class="grad-text">Features</span></h2>
+      <div class="features-6">
+        <div class="feature-item">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg></div>
+          <h3>AI Chat</h3><p>Chat, ask, and get help instantly.</p>
+        </div>
+        <div class="feature-item">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg></div>
+          <h3>Voice Commands</h3><p>Control your device with your voice.</p>
+        </div>
+        <div class="feature-item">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+          <h3>App Control</h3><p>Open apps, take notes, set alarms, and more.</p>
+        </div>
+        <div class="feature-item">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linejoin="round"><path d="M12 2 2 8l10 6 10-6-10-6zM2 14l10 6 10-6"/></svg></div>
+          <h3>Background Assistant</h3><p>Always active, ready when you need it.</p>
+        </div>
+        <div class="feature-item">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Multi-Platform</h3><p>Use on Android, Windows, and Web.</p>
+        </div>
+        <div class="feature-item">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9c.23.66.86 1.1 1.55 1H21a2 2 0 1 1 0 4h-.09c-.69 0-1.32.44-1.51 1z"/></svg></div>
+          <h3>Customization</h3><p>Make AYRA your way (voice, theme, behavior).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / INSTALL -->
+  <section class="section" id="install" style="padding-top:20px">
+    <div class="container">
+      <div class="cta">
+        <span class="logo-mark">A</span>
+        <div class="cta-text">
+          <h2>Try AYRA Now</h2>
+          <p>Install the Android app for the full experience with background assistant. Web version coming soon.</p>
+          <p class="apk-meta" id="apkMeta">Android APK &bull; v1.0.0 &bull; 51 MB &bull; free</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="#how" data-web-btn>Use on Web &#10140;</a>
+          <a class="btn btn-outline" href="downloads/ayra-release.apk" download>&#129680; Download APK &#8681;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="about">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top"><span class="logo-mark">A</span> AYRA</a>
+        <p>Your Personal AI Assistant</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="https://github.com/Muzammilarain44/Ayra" target="_blank" rel="noopener">Changelog</a>
+      </div>
+      <div class="foot-col">
+        <h4>Resources</h4>
+        <a href="https://github.com/Muzammilarain44/Ayra" target="_blank" rel="noopener">Docs</a>
+        <a href="https://github.com/Muzammilarain44/Ayra" target="_blank" rel="noopener">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <a href="https://github.com/Muzammilarain44/Ayra" target="_blank" rel="noopener">GitHub</a>
+        <span>YouTube</span>
+        <span>Discord</span>
+      </div>
+      <div class="foot-quote">&ldquo;A smarter, more personal assistant &mdash; AYRA&rdquo;</div>
+    </div>
+    <p class="foot-bottom">&copy; 2026 AYRA. Free forever &mdash; no accounts, no tracking, no ads.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
